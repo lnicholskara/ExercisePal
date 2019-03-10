@@ -15,12 +15,23 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <!-- Font Awesome CSS -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <!-- Font Awesome CSS
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 
     </head>
 
     <body class="blue-grey lighten-5">
+
+        <div class="navbar-fixed indigo grey-text">
+            <nav>
+                <div class="nav-wrapper indigo grey-text">
+                <a class="brand-logo center">Exercise Pal</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="../">Home</a></li>
+                </ul>
+                </div>
+            </nav>
+        </div>
 
         <div class="container">
 
@@ -56,43 +67,412 @@
 
             <h4 class ="indigo-text">Your Workout Preferences</h4>
 
-            <h6 class="grey-text text-darken-3">I like to workout in the mornings!</h6>
+            <form action="#" method="post" class="surveyForm" id = "question1" style = "margin-top: 2em">
 
-            <form action="#">
+                <h6 class="grey-text text-darken-3">I like to workout in the mornings!</h6>
+
                 <p>
                     <label>
-                    <input class="with-gap" name="group1" type="radio"  />
+                    <input class="with-gap" name="answer" type="radio" value= "1"/>
                     <span>1 (Strongly Disagree)</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                    <input class="with-gap" name="group1" type="radio" />
+                    <input class="with-gap" name="answer" type="radio" value= "2" />
                     <span>2</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                    <input class="with-gap" name="group1" type="radio" />
+                    <input class="with-gap" name="answer" type="radio" value= "3"/>
                     <span>3</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                    <input class="with-gap" name="group1" type="radio"  />
+                    <input class="with-gap" name="answer" type="radio" value= "4"/>
                     <span>4</span>
                     </label>
                 </p>
                 <p>
                     <label>
-                    <input class="with-gap" name="group1" type="radio"  />
+                    <input class="with-gap" name="answer" type="radio" value= "5"/>
                     <span>5 (Strongly Agree)</span>
                     </label>
                 </p>
             </form>
 
-            <a class="center-align indigo waves-effect waves-light btn-large" style="text-align: center; margin-top: 2em" id = "submit">Submit Results!</a>
+            <form action="#" method="post" class="surveyForm" id = "question2" style = "margin-top: 2em">
 
+                <h6 class="grey-text text-darken-3">I want a partner who will push me to do harder workouts.</h6>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "1"/>
+                    <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "2" />
+                    <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "3"/>
+                    <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "4"/>
+                    <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "5"/>
+                    <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+            </form>
+
+            <form action="#" method="post" class="surveyForm" id = "question3" style = "margin-top: 2em">
+
+                <h6 class="grey-text text-darken-3">My main goal is building muscle.</h6>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "1"/>
+                    <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "2" />
+                    <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "3"/>
+                    <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "4"/>
+                    <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "5"/>
+                    <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+            </form>
+
+            <form action="#" method="post" class="surveyForm" id = "question4" style = "margin-top: 2em">
+
+                <h6 class="grey-text text-darken-3">My main goal is building muscle.</h6>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "1"/>
+                    <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "2" />
+                    <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "3"/>
+                    <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "4"/>
+                    <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "5"/>
+                    <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+            </form>
+
+            <form action="#" method="post" class="surveyForm" id = "question5" style = "margin-top: 2em">
+
+                <h6 class="grey-text text-darken-3">I prefer to exercise in the evenings.</h6>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "1"/>
+                    <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "2" />
+                    <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "3"/>
+                    <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "4"/>
+                    <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "5"/>
+                    <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+            </form>
+
+            <form action="#" method="post" class="surveyForm" id = "question6" style = "margin-top: 2em">
+
+                <h6 class="grey-text text-darken-3">Exercising outside is fun for me!</h6>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "1"/>
+                    <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "2" />
+                    <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "3"/>
+                    <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "4"/>
+                    <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "5"/>
+                    <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+            </form>
+
+            <form action="#" method="post" class="surveyForm" id = "question7" style = "margin-top: 2em">
+
+                <h6 class="grey-text text-darken-3">I prefer cardio over weight-lifting.</h6>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "1"/>
+                    <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "2" />
+                    <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "3"/>
+                    <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "4"/>
+                    <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "5"/>
+                    <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+            </form>
+
+            <form action="#" method="post" class="surveyForm" id = "question8" style = "margin-top: 2em">
+
+                <h6 class="grey-text text-darken-3">Fewer, but longer workouts fit my schedule best.</h6>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "1"/>
+                    <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "2" />
+                    <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "3"/>
+                    <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "4"/>
+                    <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "5"/>
+                    <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+            </form>
+
+            <form action="#" method="post" class="surveyForm" id = "question9" style = "margin-top: 2em">
+
+                <h6 class="grey-text text-darken-3">I like chatting with my buddy during workouts.</h6>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "1"/>
+                    <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "2" />
+                    <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "3"/>
+                    <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "4"/>
+                    <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "5"/>
+                    <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+            </form>
+
+            <form action="#" method="post" class="surveyForm" id = "question10" style = "margin-top: 2em">
+
+                <h6 class="grey-text text-darken-3">My workouts are short and focused.</h6>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "1"/>
+                    <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "2" />
+                    <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "3"/>
+                    <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "4"/>
+                    <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "5"/>
+                    <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+            </form>
+
+            <form action="#" method="post" class="surveyForm" id = "question11" style = "margin-top: 2em">
+
+                <h6 class="grey-text text-darken-3">I hope to relax during exercise.</h6>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "1"/>
+                    <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "2" />
+                    <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "3"/>
+                    <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "4"/>
+                    <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="answer" type="radio" value= "5"/>
+                    <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+            </form>
+    
+            <a class="center-align indigo waves-effect waves-light btn-large modal-trigger" style="text-align: center; margin-top: 3em" id = "submit" data-target="modal1">Submit Results!</a>
+
+        </div>
+
+        <footer>
+            <div class="footer-copyright indigo grey-text" style = "margin-top: 3em; padding: 2em">
+                <div class="container">©2019 Copyright
+                    <a class="grey-text text-lighten-4 right" href="/api/friends">API Survey Results Link</a>
+                </div>
+            </div>
+        </footer>
+
+        <div id="modal1" class="modal blue-grey lighten-5 indigo-text">
+            <div class="modal-content">
+                <h4 class="center">Your new workout buddy is </h4>
+                <h4 class="center grey-text" id="userMatch"></h4>
+            </div>
+            <div class="modal-footer blue-grey lighten-5 indigo-text">
+                <a href="/survey" class="modal-close waves-effect indigo btn-flat white-text">Try again!</a>
+            </div>
         </div>
 
         <!--jQuery-->
@@ -105,30 +485,47 @@
 
     <script type="text/javascript">
 
+    $(document).ready(function() {
+        $('.modal').modal({
+            dismissible: false,
+            opacity: .7, // Opacity of modal background
+            inDuration: 300, // Transition in duration
+            outDuration: 200, // Transition out duration
+            startingTop: '4%', // Starting top style attribute
+            endingTop: '10%' // Ending top style attribute
+        });
+    });
+
     $(document).on("click", "#submit", function(){
         
         event.preventDefault();
 
+        var resultsArr = [question1.elements.answer.value, question2.elements.answer.value, question3.elements.answer.value, question4.elements.answer.value, question5.elements.answer.value, question6.elements.answer.value, question7.elements.answer.value, question8.elements.answer.value, question9.elements.answer.value, question10.elements.answer.value, question11.elements.answer.value];
+
 		var surveyResults = {
-			surveyFirstName: $('#first_name').val(),
-			surveyFirstName: $('#last_name').val(),
+			name: $('#first_name').val() + " " + $('#last_name').val(),
 			photoLink: $('#photo_link').val(),
-			resultsArr: resultsArr
+			scores: resultsArr
 		};
 
 		console.log(surveyResults);
 
 		var currentURL = window.location.origin;
 
-	    $.post(currentURL + "/api/survey_results", surveyResults,
-	    function(data){
+        $.post(currentURL + "/api/friends", surveyResults)
+        .then(function(data){
             console.log("----");
             console.log(data);
             console.log("----");
 
     		$('#first_name').val("");
 			$('#last_name').val("");
-			$('#photo_link').val("");
+            $('#photo_link').val("");
+            $('input[name=answer]').attr('checked',false);
+
+            $('#userMatch').html(data.matchName);
+
+            $('#modal1').modal('open');
 
 	    });
 

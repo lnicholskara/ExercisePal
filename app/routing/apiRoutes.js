@@ -1,17 +1,38 @@
-var path = require("path");
 var friends = require("../data/friends.js");
 
-app.get("/api/survey_results", function(req, res) {
-    return res.json(friends);
-});
+console.log(friends)
 
-app.post("/api/survey_results", function(req, res) {
+module.exports = function(app) {
 
-    var newFriend = req.body;
+    app.get("/api/friends", function(req, res) {
+        return res.json(friends);
+    });
 
-    console.log(newFriend);
+    app.post("/api/friends", function(req, res) {
 
-    friends.push(newFriend);
+        var newFriend = req.body;
+        var currentUser = newFriend.scores;
+        var matchName;
+        var totalDiff = 100;
 
-    res.json(newFriend);
-});
+        for (var i = 0; i < friends.length; i++) {
+
+            var diff = 0;
+
+            for (var j = 0; j < currentUser.length; j++) {
+
+                diff += Math.abs(friends[i].scores[j] - currentUser[j])
+            }
+
+            if (diff < totalDiff) {
+                totalDiff = diff;
+                matchName = friends[i].name;
+            }
+
+        }
+
+        friends.push(newFriend);
+
+        res.json({status: 'OK', matchName: matchName});
+    });
+}
