@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-us">
+
+    <head>
+        <title>Exercise Pal</title>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Reset Style -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+
+        <!-- Materialize CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    </head>
+
+    <body class="blue-grey lighten-5">
+
+        <div class="container">
+
+            <h2 class="indigo-text">Survey Questions</h2>
+
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="first_name" type="text" class="validate">
+                    <label for="first_name">First Name</label>
+                </div>
+                <div class="input-field col s6">
+                    <input id="last_name" type="text" class="validate">
+                    <label for="last_name">Last Name</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <i class="material-icons left valign-wrapper">photo_camera</i>
+                <h5 class ="grey-text text-darken-3">Attach Your Photo</h5>
+
+                <form action="#">
+                    <div class="file-field input-field">
+                        <div class="btn indigo waves-effect waves-light">
+                        <span>File</span>
+                        <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" id = "photo_link">
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <h4 class ="indigo-text">Your Workout Preferences</h4>
+
+            <h6 class="grey-text text-darken-3">I like to workout in the mornings!</h6>
+
+            <form action="#">
+                <p>
+                    <label>
+                    <input class="with-gap" name="group1" type="radio"  />
+                    <span>1 (Strongly Disagree)</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="group1" type="radio" />
+                    <span>2</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="group1" type="radio" />
+                    <span>3</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="group1" type="radio"  />
+                    <span>4</span>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                    <input class="with-gap" name="group1" type="radio"  />
+                    <span>5 (Strongly Agree)</span>
+                    </label>
+                </p>
+            </form>
+
+            <a class="center-align indigo waves-effect waves-light btn-large" style="text-align: center; margin-top: 2em" id = "submit">Submit Results!</a>
+
+        </div>
+
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!--Materialize Javascript-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    </body>
+
+    <script type="text/javascript">
+
+    $(document).on("click", "#submit", function(){
+        
+        event.preventDefault();
+
+		var surveyResults = {
+			surveyFirstName: $('#first_name').val(),
+			surveyFirstName: $('#last_name').val(),
+			photoLink: $('#photo_link').val(),
+			resultsArr: resultsArr
+		};
+
+		console.log(surveyResults);
+
+		var currentURL = window.location.origin;
+
+	    $.post(currentURL + "/api/survey_results", surveyResults,
+	    function(data){
+            console.log("----");
+            console.log(data);
+            console.log("----");
+
+    		$('#first_name').val("");
+			$('#last_name').val("");
+			$('#photo_link').val("");
+
+	    });
+
+    });
+
+    </script>
+
+</html>
